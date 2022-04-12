@@ -1,0 +1,77 @@
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  margin: 40px auto;
+  padding: 40px 0;
+  border: 1px solid #95a0a7;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.form-container > div {
+}
+
+.form-title {
+  color: #2a414f;
+  font-size: 35px;
+  font-weight: 400;
+}
+.input-group {
+  margin-bottom: 20px;
+}
+.input-group label {
+  display: block;
+  margin-left: 5px;
+}
+.input-group input {
+  width: 415px;
+
+  height: 55px;
+  border: 1px solid #95a0a7;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 24px;
+}
+.form-submit {
+  width: 415px;
+  height: 55px;
+  background: rgba(255, 153, 0, 0.3);
+  border-radius: 5px;
+  font-size: 21px;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.form-submit:hover {
+  background: rgba(255, 153, 0, 0.5);
+}
+.form-link {
+  color: #ff9900;
+  text-decoration: none;
+}
+.or-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 38px;
+}
+.or-container > div {
+  width: 145px;
+  height: 1px;
+  background: #95a0a7;
+}
+.or-container span {
+  color: #95a0a7;
+}
+.google-login-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 415px;
+  height: 55px;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #95a0a7;
+  cursor: pointer;
+}
