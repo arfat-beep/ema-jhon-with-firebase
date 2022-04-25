@@ -8,13 +8,13 @@ import { removeFromDb } from "../../utilities/fakedb";
 import { Link } from "react-router-dom";
 const Orders = () => {
   const [products, setProducts] = useProducts();
-  const [cart, setCart] = useCart(products);
+  const [cart, setCart] = useCart();
   let restCart = [];
   const handleRemoveProduct = (product) => {
     restCart = cart.filter((cartProduct) => cartProduct !== product);
     setCart(restCart);
 
-    removeFromDb(product.id);
+    removeFromDb(product._id);
   };
 
   return (
@@ -22,7 +22,7 @@ const Orders = () => {
       <div className="review-items-container">
         {cart.map((product) => (
           <Review
-            key={product.id}
+            key={product._id}
             product={product}
             handleRemoveProduct={handleRemoveProduct}
           ></Review>
