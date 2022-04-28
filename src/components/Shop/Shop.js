@@ -16,20 +16,22 @@ const Shop = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products?page=${page}&size=${size}`)
+    fetch(
+      `https://arfat23546454-xyz.herokuapp.com/products?page=${page}&size=${size}`
+    )
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [page, size]);
 
   // find total data in database
   useEffect(() => {
-    fetch("http://localhost:5000/productCount")
+    fetch("https://arfat23546454-xyz.herokuapp.com/productCount")
       .then((res) => res.json())
       .then((data) => setPageCount(Math.ceil(data.count / size)));
   }, [size]);
 
   /* useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://arfat23546454-xyz.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []); */
